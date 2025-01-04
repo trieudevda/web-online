@@ -1,6 +1,11 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
-import { User, Photo } from './entity/User';
+import { User } from './entity/User';
+import { Invoice } from './entity/Invoice';
+import { Product } from './entity/Product';
+import { ProductDetail } from './entity/ProductDetail';
+import { Supplier } from './entity/Supplier';
+import { InvoiceDetail } from './entity/InvoiceDetail';
 
 export const AppDataSource = new DataSource({
     type: 'mysql',
@@ -11,7 +16,7 @@ export const AppDataSource = new DataSource({
     database: 'webonlinesale',
     synchronize: true,
     logging: false,
-    entities: [User, Photo],
+    entities: [User],
     migrations: [],
     subscribers: [],
 });
